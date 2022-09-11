@@ -1,0 +1,65 @@
+/* Global */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: black;
+  color: white;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+/* Header/Nav */
+
+nav {
+  display: flex;
+  width: 100vw;
+  height: 10vh;
+  justify-content: space-between;
+}
+
+.nav-left-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nav-left-title {
+  display: flex;
+  background-color: white;
+  color: black;
+  height: 5vh;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Namge game and value dsiplay */
+
+.game-tittle-display {
+  display: Flex;
+  flex-direction: column;
+  width: 100vw;
+  align-items: center;
+}
+.input-value-display {
+  display: Flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.score {
+  display: flex;
+  position: relative;
+  bottom: -7vh;
+  background-color: white;
+  width: 15vw;
+  height: 15vh;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+.line {
+  width: 100vw;
+  border: 0.1rem solid white;
+}
