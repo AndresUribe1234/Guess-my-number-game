@@ -1,3 +1,8 @@
+/* Variables */
+:root {
+  --size-font-game: 1.4rem;
+}
+
 /* Global */
 * {
   box-sizing: border-box;
@@ -9,6 +14,10 @@
 
 html {
   font-size: 62.5%;
+}
+
+body {
+  font-size: var(--size-font-game);
 }
 
 /* Header/Nav */
@@ -48,13 +57,18 @@ nav {
   width: 100vw;
   align-items: center;
 }
+
 .input-value-display {
   display: Flex;
   flex-direction: column;
   align-items: center;
 }
 
-.score {
+.game-name {
+  font-size: 4rem;
+}
+
+.current-input {
   display: flex;
   position: relative;
   bottom: -7vh;
@@ -64,6 +78,7 @@ nav {
   justify-content: center;
   align-items: center;
   color: black;
+  font-size: 4rem;
 }
 .line {
   width: 100vw;
@@ -123,6 +138,8 @@ nav {
   width: 7.5vw;
   height: 5vh;
   color: black;
+  font-size: var(--size-font-game);
+  cursor: pointer;
 }
 
 .game-results-display .right-section {
@@ -133,4 +150,9 @@ nav {
   border-bottom: 0.1rem solid white;
   justify-content: center;
   align-items: center;
+}
+
+.right-section span,
+.right-section div {
+  margin-bottom: 1rem;
 }

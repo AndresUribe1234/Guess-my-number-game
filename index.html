@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Guess My Number!</title>
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
   <body>
@@ -15,9 +15,9 @@
       <div class="nav-right-container">(Between 1 and 20)</div>
     </nav>
     <section class="game-tittle-display">
-      <div>Guess my number!</div>
+      <div class="game-name">Guess My Number!</div>
       <div class="input-value-display">
-        <span class="score">score</span>
+        <span class="current-input">?</span>
         <div class="line"></div>
       </div>
     </section>
@@ -30,14 +30,14 @@
           <button>Check!</button>
         </div>
         <div class="right-section">
-          <span>message</span>
+          <span class="dinamic-message">Enter a number to start the game!</span>
           <div class="score-game">
             <span>Score: </span>
-            <span></span>
+            <span class="current-score">20</span>
           </div>
           <div class="highscore">
-            <span>Score: </span>
-            <span></span>
+            <span class="current-highscore">Highscore: </span>
+            <span>0</span>
           </div>
         </div>
       </div>
