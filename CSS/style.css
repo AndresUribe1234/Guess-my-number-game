@@ -32,9 +32,15 @@ nav {
   height: 5vh;
   align-items: center;
   justify-content: center;
+  margin-left: 1rem;
 }
 
-/* Namge game and value dsiplay */
+.nav-right-container {
+  margin-top: 1rem;
+  margin-right: 1rem;
+}
+
+/* Name of game and value display */
 
 .game-tittle-display {
   display: Flex;
@@ -62,4 +68,69 @@ nav {
 .line {
   width: 100vw;
   border: 0.1rem solid white;
+}
+
+/* game results display*/
+
+.game-results-display {
+  display: flex;
+  width: 100vw;
+  height: 40vh;
+  margin-top: 10rem;
+  justify-content: center;
+}
+
+.container-results {
+  display: flex;
+  width: 70vh;
+  height: 40vh;
+  border: 0.1rem solid white;
+}
+
+.game-results-display .left-section {
+  display: flex;
+  flex-direction: column;
+  width: 35vh;
+  height: inherit;
+  border-bottom: 0.1rem solid white;
+  justify-content: center;
+  align-items: center;
+}
+
+.outside-input {
+  display: flex;
+  height: 10vh;
+  width: 25vh;
+  border: 0.1rem solid white;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+
+.outside-input input {
+  text-align: center;
+  width: 15vh;
+  border: none;
+}
+
+.outside-input input:focus {
+  background-color: rgba(220, 236, 241, 0.484);
+  border: none;
+  outline: none;
+}
+
+.left-section button {
+  background-color: white;
+  width: 7.5vw;
+  height: 5vh;
+  color: black;
+}
+
+.game-results-display .right-section {
+  display: flex;
+  flex-direction: column;
+  width: 35vh;
+  height: inherit;
+  border-bottom: 0.1rem solid white;
+  justify-content: center;
+  align-items: center;
 }
