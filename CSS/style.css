@@ -18,6 +18,17 @@ body {
   font-size: var(--size-font-game);
   background-color: black;
   color: white;
+  font-family: arial,sans-serif;
+}
+
+button:hover {
+    border: 0.1rem solid #dadce0;
+    color: #222;
+    box-shadow: 0 0.1rem 0.1rem rgb(0 0 0 / 87%);
+}
+
+button {
+    border-color: white
 }
 
 /* Header/Nav */
@@ -34,14 +45,17 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.nav-left-title {
+.play-again {
   display: flex;
   background-color: white;
   color: black;
-  height: 5vh;
+  height: 6vh;
+  width: 12vw;
   align-items: center;
   justify-content: center;
   margin-left: 1rem;
+  font-size: var(--size-font-game);
+  cursor: pointer;
 }
 
 .nav-right-container {
@@ -127,6 +141,7 @@ nav {
   border: none;
   background-color: transparent;
   color: white;
+  font-size: 4rem;
 }
 
 .user-input:focus {
@@ -142,7 +157,12 @@ nav {
   color: black;
   font-size: var(--size-font-game);
   cursor: pointer;
-  border: none;
+}
+
+.left-section button:hover {
+    border: 0.1rem solid #dadce0;
+    color: #222;
+    box-shadow: 0 0.1rem 0.1rem rgb(0 0 0 / 87%);
 }
 
 .game-results-display .right-section {

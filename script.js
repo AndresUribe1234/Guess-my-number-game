@@ -1,10 +1,12 @@
 'use strict';
 
-const secretNumber = Math.trunc(Math.random() * 20 + 1);
+let secretNumber = Math.trunc(Math.random() * 20 + 1);
 console.log(secretNumber);
 
 let score = 20;
+let highScore = 0;
 
+// Input button
 document
   .querySelector('.left-section button')
   .addEventListener('click', function () {
@@ -15,14 +17,15 @@ document
     if (!guess) {
       document.querySelector('.dinamic-message').textContent =
         'Please enter a valid option! ⚠️';
-      document.querySelector('.nav-left-title').textContent = 'No valid input!';
       //   When player wins
     } else if (guess === secretNumber) {
       document.querySelector('.current-input').textContent = guess;
       document.querySelector('.dinamic-message').textContent = `You won!`;
-      document.querySelector('.nav-left-title').textContent =
-        'Congratulations! You won!';
       document.querySelector('body').style.backgroundColor = 'rgb(60, 189, 60)';
+      if (highScore < score) {
+        highScore = score;
+        document.querySelector('.current-highscore').textContent = score;
+      }
       // When player inputs a wrong number
     } else {
       document.querySelector('.current-input').textContent = guess;
@@ -32,13 +35,12 @@ document
         if (guess < secretNumber) {
           document.querySelector(
             '.dinamic-message'
-          ).textContent = `${guess} is too low! 👎 Enter another number! 🔢`;
+          ).textContent = `${guess} is too low!👎 Enter another number! #️⃣`;
         } else if (guess > secretNumber) {
           document.querySelector(
             '.dinamic-message'
-          ).textContent = `${guess} is too high! 👎 Enter another number! 🔢`;
+          ).textContent = `${guess} is too high!👎 Enter another number! #️⃣`;
         }
-        document.querySelector('.nav-left-title').textContent = 'Keep trying!';
       } else {
         document.querySelector(
           '.dinamic-message'
@@ -46,3 +48,15 @@ document
       }
     }
   });
+
+//   Again button
+document.querySelector('.play-again').addEventListener('click', function () {
+  score = 20;
+  document.querySelector('.current-score').textContent = 20;
+  document.querySelector('.current-input').textContent = '?';
+  document.querySelector('.outside-input input').value = '';
+  document.querySelector('body').style.backgroundColor = 'black';
+  document.querySelector('.dinamic-message').textContent =
+    '🎮 Enter a number to start the game!';
+  secretNumber = Math.trunc(Math.random() * 20 + 1);
+});
