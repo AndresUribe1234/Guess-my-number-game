@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --size-font-game: 1.4rem;
+  --size-font-game: 2rem;
 }
 
 /* Global */
@@ -8,8 +8,6 @@
   box-sizing: border-box;
   padding: 0;
   margin: 0;
-  background-color: black;
-  color: white;
 }
 
 html {
@@ -18,6 +16,8 @@ html {
 
 body {
   font-size: var(--size-font-game);
+  background-color: black;
+  color: white;
 }
 
 /* Header/Nav */
@@ -121,13 +121,15 @@ nav {
   margin-bottom: 3rem;
 }
 
-.outside-input input {
+.user-input {
   text-align: center;
   width: 15vh;
   border: none;
+  background-color: transparent;
+  color: white;
 }
 
-.outside-input input:focus {
+.user-input:focus {
   background-color: rgba(220, 236, 241, 0.484);
   border: none;
   outline: none;
@@ -140,6 +142,7 @@ nav {
   color: black;
   font-size: var(--size-font-game);
   cursor: pointer;
+  border: none;
 }
 
 .game-results-display .right-section {
@@ -149,7 +152,7 @@ nav {
   height: inherit;
   border-bottom: 0.1rem solid white;
   justify-content: center;
-  align-items: center;
+  padding-left: 2rem;/
 }
 
 .right-section span,
