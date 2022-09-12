@@ -14,13 +14,13 @@ document
     console.log(guess);
 
     // When there no valid input to start the game
-    if (!guess) {
+    if (!guess || guess > 20) {
       document.querySelector('.dinamic-message').textContent =
         'Please enter a valid option! ⚠️';
       //   When player wins
     } else if (guess === secretNumber) {
       document.querySelector('.current-input').textContent = guess;
-      document.querySelector('.dinamic-message').textContent = `You won!`;
+      document.querySelector('.dinamic-message').textContent = `🤖 You won!`;
       document.querySelector('body').style.backgroundColor = 'rgb(60, 189, 60)';
       if (highScore < score) {
         highScore = score;
@@ -32,14 +32,12 @@ document
       if (score > 0) {
         score = score - 1;
         document.querySelector('.current-score').textContent = score;
-        if (guess < secretNumber) {
+        if (guess !== secretNumber) {
           document.querySelector(
             '.dinamic-message'
-          ).textContent = `${guess} is too low!👎 Enter another number! #️⃣`;
-        } else if (guess > secretNumber) {
-          document.querySelector(
-            '.dinamic-message'
-          ).textContent = `${guess} is too high!👎 Enter another number! #️⃣`;
+          ).textContent = `${guess} is too ${
+            guess > secretNumber ? 'high' : 'low'
+          }!👎 Enter another number! #️⃣`;
         }
       } else {
         document.querySelector(
